@@ -1,7 +1,6 @@
 <template>
   <div class="company">
     <p class="company-id">{{ id }}</p>
-    <!-- <h3>{{ name }}</h3> -->
     <router-link :to="{ name: 'CompanyPage',
         params: {
           id: id,
@@ -14,12 +13,24 @@
     >
       {{ name }}
     </router-link>
-    <button><router-link to="/edit">Edit</router-link></button>
+    <button>
+      <router-link :to="{ name: 'Edit',
+          params: {
+            id: id,
+            compName: name,
+            domain: domain,
+            employees: employees,
+            subsPerEE: subsPerEE,
+          }
+        }"
+      >
+        Edit
+      </router-link>
+    </button>
   </div>
 </template>
 
 <script>
-// import CompanyPage from './CompanyPage.vue';
 
 export default {
   name: 'Company',
@@ -30,9 +41,6 @@ export default {
     employees: Number,
     subsPerEE: Number,
   },
-  // components: {
-  //   CompanyPage,
-  // },
 };
 </script>
 
