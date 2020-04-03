@@ -4,6 +4,9 @@
     <h2>{{ domain }}</h2>
     <p>{{ employees }}</p>
     <p>{{ subsPerEE }}</p>
+    <button>
+      <router-link to="/">Back</router-link>
+    </button>
   </div>
 </template>
 
