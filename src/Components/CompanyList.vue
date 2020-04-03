@@ -7,6 +7,9 @@
           :key="company.id"
           :name="company.name"
           :id="company.id"
+          :domain="company.domain"
+          :employees="company.numberOfEmployees"
+          :subsPerEE="company.subscriptionsPerEmployee"
         />
       </ul>
   </div>
